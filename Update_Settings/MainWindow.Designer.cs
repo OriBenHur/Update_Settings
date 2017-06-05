@@ -32,11 +32,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeSettingsxmlLoctionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button_apply = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Add_Item_btn = new System.Windows.Forms.Button();
             this.rightClickMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Move_To_Index_MenueItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripTextBox();
+            this.moveToIndexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.rightClickMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -66,17 +68,6 @@
             this.changeSettingsxmlLoctionToolStripMenuItem.Text = "Change settings.xml location";
             this.changeSettingsxmlLoctionToolStripMenuItem.Click += new System.EventHandler(this.ChangeSettingsxmlLoctionToolStripMenuItem_Click);
             // 
-            // button_apply
-            // 
-            this.button_apply.Enabled = false;
-            this.button_apply.Location = new System.Drawing.Point(719, 409);
-            this.button_apply.Name = "button_apply";
-            this.button_apply.Size = new System.Drawing.Size(75, 23);
-            this.button_apply.TabIndex = 2;
-            this.button_apply.Text = "Apply";
-            this.button_apply.UseVisualStyleBackColor = true;
-            this.button_apply.Visible = false;
-            // 
             // listView1
             // 
             this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -93,7 +84,7 @@
             // Add_Item_btn
             // 
             this.Add_Item_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Add_Item_btn.Location = new System.Drawing.Point(12, 409);
+            this.Add_Item_btn.Location = new System.Drawing.Point(12, 406);
             this.Add_Item_btn.Name = "Add_Item_btn";
             this.Add_Item_btn.Size = new System.Drawing.Size(75, 23);
             this.Add_Item_btn.TabIndex = 3;
@@ -104,16 +95,43 @@
             // rightClickMenuStrip
             // 
             this.rightClickMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Move_To_Index_MenueItem,
             this.deleteItemToolStripMenuItem});
             this.rightClickMenuStrip.Name = "rightClickMenuStrip";
-            this.rightClickMenuStrip.Size = new System.Drawing.Size(135, 26);
+            this.rightClickMenuStrip.Size = new System.Drawing.Size(153, 70);
             // 
             // deleteItemToolStripMenuItem
             // 
             this.deleteItemToolStripMenuItem.Name = "deleteItemToolStripMenuItem";
-            this.deleteItemToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.deleteItemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deleteItemToolStripMenuItem.Text = "Delete Item";
             this.deleteItemToolStripMenuItem.Click += new System.EventHandler(this.deleteItemToolStripMenuItem_Click);
+            // 
+            // Move_To_Index_MenueItem
+            // 
+            this.Move_To_Index_MenueItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.Move_To_Index_MenueItem.Name = "Move_To_Index_MenueItem";
+            this.Move_To_Index_MenueItem.Size = new System.Drawing.Size(152, 22);
+            this.Move_To_Index_MenueItem.Text = "Move To Index";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.AcceptsReturn = true;
+            this.toolStripMenuItem1.AutoSize = false;
+            this.toolStripMenuItem1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolStripMenuItem1.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripMenuItem1.MaxLength = 100;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(23, 23);
+            this.toolStripMenuItem1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolStripMenuItem1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripMenuItem1_KeyDown);
+            // 
+            // moveToIndexToolStripMenuItem
+            // 
+            this.moveToIndexToolStripMenuItem.Name = "moveToIndexToolStripMenuItem";
+            this.moveToIndexToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.moveToIndexToolStripMenuItem.Text = "Move to index";
             // 
             // MainWindow
             // 
@@ -121,7 +139,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(806, 440);
             this.Controls.Add(this.Add_Item_btn);
-            this.Controls.Add(this.button_apply);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -141,11 +158,13 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changeSettingsxmlLoctionToolStripMenuItem;
-        private System.Windows.Forms.Button button_apply;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button Add_Item_btn;
         private System.Windows.Forms.ContextMenuStrip rightClickMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem deleteItemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem moveToIndexToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Move_To_Index_MenueItem;
+        private System.Windows.Forms.ToolStripTextBox toolStripMenuItem1;
     }
 }
 
